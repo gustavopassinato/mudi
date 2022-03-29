@@ -1,0 +1,72 @@
+package br.com.alura.mvc.mudi.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Pedido {
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String nomeProduto;
+	private BigDecimal preco;
+	private LocalDate dataEntrega;
+	private String urlProduto;
+	private String urlImagem;
+	private String descricao;
+
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
+	}
+
+	public String getNomeProduto() {
+		return nomeProduto;
+	}
+
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+
+	public LocalDate getDataEntrega() {
+		return dataEntrega;
+	}
+
+	public void setDataEntrega(LocalDate dataEntrega) {
+		this.dataEntrega = dataEntrega;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getUrlProduto() {
+		return urlProduto;
+	}
+
+	public void setUrlProduto(String urlProduto) {
+		this.urlProduto = urlProduto;
+	}
+
+}
