@@ -1,5 +1,5 @@
 <html>
-	<head th:replace="~{base :: head}"></head>
+	<head th:replace="~{base :: head('Novo Pedido')}"></head>
 	<body>
 		<div th:replace="~{base :: logo}"></div>
 		
@@ -36,7 +36,7 @@
 						<label class="form-label" for="descricao"></label>
 						<textarea th:field="*{descricao}" class="form-control" name="descricao" cols="30" rows="10" placeholder="Adicione detalhes importanetes para o comprador"></textarea>
 					</div>
-					<button class="btn btn-primary" type="submit">Button</button>
+					<button class="btn btn-primary" type="submit">Cadastrar</button>
 				</form>
 			</div>
 		</div>
